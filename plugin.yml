@@ -1,3 +1,3 @@
-name: DeathLocation
-main: io.github.mrlawrence.bukkit.deathlocation.DeathLocation
+name: Death Location
+main: bukkit.deathlocation.DeathLocation
 version: 0.1

@@ -1,0 +1,11 @@
+#####################################
+# Death Position Configuration File #
+#####################################
+
+
+# message shown to the dead player
+# x, y, z = $x, $y, $z
+# world = $w
+# example
+# message: Oh dear, you died in $w at $x, $y, $z
+message: You died at $x, $y, $z

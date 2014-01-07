@@ -1,4 +1,4 @@
-package io.github.mrlawrence.bukkit.deathlocation;
+package bukkit.deathlocation;
 
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;

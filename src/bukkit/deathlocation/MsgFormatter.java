@@ -34,7 +34,7 @@ public class MsgFormatter {
 		String formatted;
 		formatted = configString.replace("$w", "%1$s").replace("$x", "%2$s")
 				.replace("$y", "%3$s").replace("$z", "%4$s")
-				.replace("$n", "%4$s");
+				.replace("$n", "%5$s");
 		return formatted;
 	}
 }

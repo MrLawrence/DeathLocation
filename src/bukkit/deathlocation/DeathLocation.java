@@ -4,14 +4,14 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class DeathLocation extends JavaPlugin {
-	private final DeathListener deathListener = new DeathListener(this);
-	
+
 	@Override
 	public void onEnable() {
-	    this.saveDefaultConfig();
-	    
-		PluginManager pm = getServer().getPluginManager();
-		pm.registerEvents(deathListener, this);
+		this.saveDefaultConfig();
+		MsgFormatter formatter = new MsgFormatter(this.getConfig());
+		DeathListener deathListener = new DeathListener(formatter);
+		PluginManager manager = getServer().getPluginManager();
+		manager.registerEvents(deathListener, this);
 	}
 
 	@Override

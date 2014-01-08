@@ -2,14 +2,15 @@
 # Death Position Configuration File #
 #####################################
 
-
+# DESCRIPTION
 # message shown to the dead player
 #
 # PLACEHOLDERS
 # x, y, z:	$x, $y, $z
 # world:	$w
+# player:	$n
 #
 # EXAMPLE
-# message: Oh dear, you died in $w at $x, $y, $z
+# message: Poor $n, you died in $w at $x, $y, $z!
 #
-message: You died at $x, $y, $z
+message: $n, you died at $x, $y, $z

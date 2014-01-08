@@ -32,11 +32,9 @@ public class MsgFormatter {
 
 	private String formatString(String configString) {
 		String formatted;
-		formatted = configString.replace("$w", "%1$s");
-		formatted = formatted.replace("$x", "%2$s");
-		formatted = formatted.replace("$y", "%3$s");
-		formatted = formatted.replace("$z", "%4$s");
-		formatted = formatted.replace("$n", "%4$s");
+		formatted = configString.replace("$w", "%1$s").replace("$x", "%2$s")
+				.replace("$y", "%3$s").replace("$z", "%4$s")
+				.replace("$n", "%4$s");
 		return formatted;
 	}
 }

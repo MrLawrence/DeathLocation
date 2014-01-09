@@ -12,9 +12,9 @@
 # player:	$n
 #
 # EXAMPLE
-# message: Poor $n, you died in $w at $x, $y, $z!
+# message: 'Poor $n, you died in $w at $x, $y, $z!'
 #
-message: [Death Location] You died at $x, $y, $z
+message: '[Death Location] You died at $x, $y, $z'
 
 
 # DESCRIPTION
@@ -26,6 +26,6 @@ message: [Death Location] You died at $x, $y, $z
 # dark blue, dark green, dark red, dark aqua, dark purple, light purple
 #
 # EXAMPLE
-# color: dark purple
+# color: 'dark purple'
 #
-color: dark red
+color: 'dark red'

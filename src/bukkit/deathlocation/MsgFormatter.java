@@ -14,13 +14,13 @@ public class MsgFormatter {
 
 	public String buildDeathMessage(Player player) {
 		Object[] formatArgs = this.getArgs(player);
-		String format = this.formatString(plugin.getConfig().getString(
-				"message"));
+		String configMessage = plugin.getConfig().getString("message");
+		String format = this.formatString(configMessage);
 		format = addColor(format);
 		return String.format(format, formatArgs);
 	}
 
-	private String addColor(String string) {
+	private String addColor(String configString) {
 		ChatColor color = ChatColor.WHITE;
 		String configColor = plugin.getConfig().getString("color");
 		try {
@@ -29,7 +29,7 @@ public class MsgFormatter {
 			plugin.getLogger().warning(
 					"Illegal 'color' value in config.yml: " + configColor);
 		}
-		return color + string;
+		return color + configString;
 	}
 
 	private Object[] getArgs(Player player) {

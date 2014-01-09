@@ -21,11 +21,11 @@ message: '[Death Location] You died at $x, $y, $z'
 # color of the death message
 #
 # VALUES
-# black, white, gray, dark gray,
-# blue, green, red, yellow, aqua, gold,
-# dark blue, dark green, dark red, dark aqua, dark purple, light purple
+# BLACK, WHITE, GRAY, DARK_GRAY,
+# BLUE, GREEN, RED, YELLOW, AQUA, GOLD,
+# DARK_BLUE, DARK_GREEN, DARK_RED, DARK_AQUA, DARK_PURPLE, LIGHT_PURPLE
 #
 # EXAMPLE
-# color: 'dark purple'
+# color: 'DARK_PURPLE'
 #
-color: 'dark red'
+color: 'DARK_RED'

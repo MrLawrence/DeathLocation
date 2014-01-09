@@ -1,21 +1,35 @@
 package bukkit.deathlocation;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class MsgFormatter {
-	private FileConfiguration config;
+	private final JavaPlugin plugin;
 
-	public MsgFormatter(FileConfiguration config) {
-		this.config = config;
+	public MsgFormatter(JavaPlugin plugin) {
+		this.plugin = plugin;
 	}
 
 	public String buildDeathMessage(Player player) {
 		Object[] formatArgs = this.getArgs(player);
-		String format = this.formatString(config.getString("message"));
-
+		String format = this.formatString(plugin.getConfig().getString(
+				"message"));
+		format = addColor(format);
 		return String.format(format, formatArgs);
+	}
+
+	private String addColor(String string) {
+		ChatColor color = ChatColor.WHITE;
+		String configColor = plugin.getConfig().getString("color");
+		try {
+			color = ChatColor.valueOf(configColor);
+		} catch (IllegalArgumentException e) {
+			plugin.getLogger().warning(
+					"Illegal 'color' value in config.yml: " + configColor);
+		}
+		return color + string;
 	}
 
 	private Object[] getArgs(Player player) {

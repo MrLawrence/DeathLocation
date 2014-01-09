@@ -8,7 +8,7 @@ public final class DeathLocation extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		this.saveDefaultConfig();
-		MsgFormatter formatter = new MsgFormatter(this.getConfig());
+		MsgFormatter formatter = new MsgFormatter(this);
 		DeathListener deathListener = new DeathListener(formatter);
 		PluginManager manager = getServer().getPluginManager();
 		manager.registerEvents(deathListener, this);

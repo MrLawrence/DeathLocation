@@ -13,8 +13,4 @@ public final class DeathLocation extends JavaPlugin {
 		PluginManager manager = getServer().getPluginManager();
 		manager.registerEvents(deathListener, this);
 	}
-
-	@Override
-	public void onDisable() {
-	}
 }

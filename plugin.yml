@@ -1,3 +1,13 @@
 name: Death Location
 main: bukkit.deathlocation.DeathLocation
-version: 0.2.3
+version: 0.3.2
+
+permissions:
+  deathlocation.*:
+    description: Gives access to everything
+    children:
+      deathlocation.automsg: true
+
+  deathlocation.automsg:
+    description: sends a message with coordinates on death
+    default: true

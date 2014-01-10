@@ -14,9 +14,12 @@ public class DeathListener implements Listener {
 
 	@EventHandler
 	public void death(PlayerDeathEvent event) {
+
 		Player player = event.getEntity();
-		String message = formatter.buildDeathMessage(player);
-		player.sendMessage(message);
+		if (player.hasPermission("deathlocation.automsg")) {
+			String message = formatter.buildDeathMessage(player);
+			player.sendMessage(message);
+		}
 	}
 
 }

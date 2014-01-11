@@ -1,4 +1,4 @@
-package bukkit.deathlocation;
+package mrlawrence.bukkit.deathlocation;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

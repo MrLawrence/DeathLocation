@@ -1,4 +1,4 @@
-package bukkit.deathlocation;
+package mrlawrence.bukkit.deathlocation;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;

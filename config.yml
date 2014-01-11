@@ -1,5 +1,5 @@
 #####################################
-# Death Position Configuration File #
+# Death Location Configuration File #
 #####################################
 
 
@@ -14,11 +14,11 @@
 # EXAMPLE
 # message: 'Poor $n, you died in $w at $x, $y, $z!'
 #
-message: '[Death Location] You died at $x, $y, $z'
+message: '[Death Location] You died at $x, $y, $z. Press F3 to view your current position.'
 
 
 # DESCRIPTION
-# color of the death message
+# color of the message
 #
 # VALUES
 # BLACK, WHITE, GRAY, DARK_GRAY,

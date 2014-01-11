@@ -1,6 +1,7 @@
 name: Death Location
-main: bukkit.deathlocation.DeathLocation
-version: 0.3.2
+main: mrlawrence.bukkit.deathlocation.DeathLocation
+version: 1.0.0
+author: Mr. Lawrence
 
 permissions:
   deathlocation.*:

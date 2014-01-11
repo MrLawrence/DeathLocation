@@ -1,5 +1,9 @@
 package mrlawrence.bukkit.deathlocation;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -45,10 +49,18 @@ public class MsgFormatter {
 	}
 
 	private String formatString(String configString) {
-		String formatted;
-		formatted = configString.replace("$w", "%1$s").replace("$x", "%2$s")
-				.replace("$y", "%3$s").replace("$z", "%4$s")
-				.replace("$n", "%5$s");
+		Map<String, String> placeholders = new HashMap<String, String>();
+		placeholders.put("$w", "%1$s");
+		placeholders.put("$x", "%2$s");
+		placeholders.put("$y", "%3$s");
+		placeholders.put("$z", "%4$s");
+		placeholders.put("$n", "%5$s");
+
+		String formatted = configString;
+		for (Entry<String, String> entry : placeholders.entrySet()) {
+			formatted = formatted.replace(entry.getKey(), entry.getValue());
+		}
+
 		return formatted;
 	}
 }

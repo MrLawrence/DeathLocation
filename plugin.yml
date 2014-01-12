@@ -1,6 +1,6 @@
 name: Death Location
 main: mrlawrence.bukkit.deathlocation.DeathLocation
-version: 1.0.1
+version: 1.1.1
 author: Mr. Lawrence
 
 permissions:
@@ -12,3 +12,9 @@ permissions:
   deathlocation.automsg:
     description: sends a message with coordinates on death
     default: true
+
+commands:
+  mydeathloc:
+    description: returns the last recorded death position of the player
+    usage: /mydeathloc
+
